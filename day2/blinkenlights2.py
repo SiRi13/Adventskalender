@@ -10,9 +10,9 @@ green.on()
 red.off()
 
 while True:
-	green.on()
+    green.on()
     red.off()
-	sleep(0.5)
-	green.off()
+    sleep(0.5)
+    green.off()
     red.on()
-	sleep(0.5)
+    sleep(0.5)
