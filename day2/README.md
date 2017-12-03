@@ -14,5 +14,5 @@ Amount | Name | Note
 Task of second day is to create a circuit with two LEDs on the breadboard and make them flash in turn at 1.0 Hz.  
 
 ### Result
-![Result of Day 1](assets/day2_alternateflyFlashingLeds.gif)  
+![Result of Day 2](assets/day2_alternatelyFlashingLeds.gif)  
 Script: [blinkenlight.py](blinkenlights2.py)
