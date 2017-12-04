@@ -18,7 +18,7 @@ Other models should work fine but you must check for correct wiring.
 - [x] [Day 1](day1/README.md)
 - [x] [Day 2](day2/README.md)
 - [x] [Day 3](day3/README.md)
-- [ ] Day 4
+- [x] [Day 4](day4/README.md)
 - [ ] Day 5
 - [ ] Day 6
 - [ ] Day 7

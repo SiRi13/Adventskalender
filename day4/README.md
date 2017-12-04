@@ -15,7 +15,9 @@ On pressing the button one LED turns off the other turns on.
 ### Result
 
 ![Circuit of Day 4](assets/IMG_20171204_071849.jpg)
+Circuit of Day 4
 
-*TODO*
+![Result of Day 4](assets/day4_ledsSwitchingOnButton.gif)
+Result of Day 4
 
 Script: [buttonLights.py](buttonLights.py)
