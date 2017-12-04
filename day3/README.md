@@ -15,5 +15,5 @@ sudo apt install rpi.gpio
 ```
 
 ### Result
-![Result of Day 3](assets/day3_alternatelyFlashingLeds.gif)  
+Since the result is the very same I only link the script here.
 Script: [flashingLights.py](flashingLights.py)
