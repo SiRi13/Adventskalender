@@ -23,11 +23,11 @@ try:
         if GPIO.input(PUSHBUTTON) == True:
             GPIO.output(RED1, 1)
             GPIO.output(GREEN1, 0)
-            GPIO.output(RED1, 1)
+            GPIO.output(RED2, 1)
         else:
             GPIO.output(RED1, 0)
             GPIO.output(GREEN1, 1)
-            GPIO.output(RED1, 0)
+            GPIO.output(RED2, 0)
 
 except KeyboardInterrupt:
     GPIO.cleanup()
