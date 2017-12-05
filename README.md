@@ -7,11 +7,14 @@ I use a RaspberryPi 3 for this project.
 Other models should work fine but you must check for correct wiring.
 
 ### Software
-- Raspbian Stretch
+- [Raspbian Stretch](https://www.raspbian.org/)
 - Python 3
 - GPIO Zero 1.4.0
-    * Install with `sudo apt install python3-gpiozero` or
+    * `sudo apt install python3-gpiozero` or
     * `pip install gpiozero`
+- Raspberry Pi GPIO 0.6.3
+    * `sudo apt install python-rpi.gpio` or
+    * `pip install RPi.GPIO`
 
 ## Advent calendar
 
@@ -19,7 +22,7 @@ Other models should work fine but you must check for correct wiring.
 - [x] [Day 2](day2/README.md)
 - [x] [Day 3](day3/README.md)
 - [x] [Day 4](day4/README.md)
-- [ ] Day 5
+- [x] [Day 5](day5/)
 - [ ] Day 6
 - [ ] Day 7
 - [ ] Day 8
