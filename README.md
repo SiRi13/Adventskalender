@@ -9,6 +9,7 @@ Other models should work fine but you must check for correct wiring.
 ### Software
 - [Raspbian Stretch](https://www.raspbian.org/)
 - Python 3
+- Scratch 1.4
 - GPIO Zero 1.4.0
     * `sudo apt install python3-gpiozero` or
     * `pip install gpiozero`
@@ -23,7 +24,7 @@ Other models should work fine but you must check for correct wiring.
 - [x] [Day 3](day3/)
 - [x] [Day 4](day4/)
 - [x] [Day 5](day5/)
-- [ ] Day 6
+- [x] [Day 6](day6/)
 - [ ] Day 7
 - [ ] Day 8
 - [ ] Day 9
