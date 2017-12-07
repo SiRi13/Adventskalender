@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <?php
             if ($_POST['light_on']) {
-                echo shell_exec('sudo $(PWD)/webLedSwitch.py');
+                echo shell_exec('sudo /var/www/html/day7/webLedSwitch.py');
             }
          ?>
         <title>Conrad Raspberry Pi Advent calendar</title>
@@ -16,10 +16,11 @@
 <body>
 <div id="envelope">
     <header>
-        <h2>Conrad Raspberry Pi Adventskalender</h2>
+        <h2>Conrad Raspberry Pi Advent calendar</h2>
     </header>
     <hr>
-    <form action="index.php" method="post">
+    <form class="" action="index.php" method="post">
+        <input type="submit" name="light_on" value="Light On" id="light_on" style="background-color: #4180C5">
     </form>
 </div>
 </body>
