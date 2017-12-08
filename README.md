@@ -26,7 +26,7 @@ Other models should work fine but you must check for correct wiring.
 - [x] [Day 5](day5/)
 - [x] [Day 6](day6/)
 - [x] [Day 7](day7/)
-- [ ] Day 8
+- [x] [Day 8](day8/)
 - [ ] Day 9
 - [ ] Day 10
 - [ ] Day 11

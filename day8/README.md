@@ -16,4 +16,7 @@ Circuit of Day 8
 
 ### Result
 
-**TODO**
+![Result of Day 8](assets/day8_dimLed.gif)
+Result of Day 8
+
+Python script: [dimLed.py](dimLed.py)
