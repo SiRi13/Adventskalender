@@ -18,4 +18,7 @@ Circuit of Day 7
 
 ### Result
 
-**TODO**
+![Result of Day 7](assets/day7_webLightSwitch.gif)
+Result of Day 7
+
+Python script: [webLedSwitch.py](webLedSwitch.py)
