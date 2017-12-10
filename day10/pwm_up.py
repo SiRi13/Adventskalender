@@ -11,12 +11,12 @@ GPIO.setup(LED, GPIO.OUT)
 
 pwm_dc = 0
 pwm = GPIO.PWM(LED, 50)  # init PWM with 50Hz
-p.start(pwm_dc)
+pwm.start(pwm_dc)
 
 while pwm_dc < 100:
     pwm_dc += 5
     pwm.ChangeDutyCycle(pwm_dc)
     time.sleep(0.1)
 
-p.stop()
+pwm.stop()
 GPIO.cleanup()
