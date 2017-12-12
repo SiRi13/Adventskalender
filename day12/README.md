@@ -15,4 +15,7 @@ One button turns the lever one step to the right, the other button turns the lev
 Circuit of Day 12
 
 ### Result
-**TODO**
+![Result of Day 12](assets/day12_buttonServo.gif)
+Result of Day 12
+
+Python script: [buttonServo.py](buttonServo.py)
