@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conrad Raspberry Pi Advent Calendar</title>
+
+	<link rel="stylesheet" type="text/css" href="css/general-styles.css">
+	<link rel="stylesheet" media="screen and (max-width: 1200px) and (min-width: 601px)" href="css/styles_1200px.css" />
+	<link rel="stylesheet" media="screen and (max-width: 600px) and (min-width: 351px)" href="css/styles_600px.css" />
+	<link rel="stylesheet" media="screen and (max-width: 350px)" href="css/styles_350px.css" />
+
+	<?php
+		if ($_POST['ccw']) {
+			echo exec('python /var/www/html/day13/pwmServo_ccw.py');
+		}
+		elseif ($_POST['cw']) {
+			echo exec('python /var/www/html/day13/pwmServo_cw.py');
+		}
+	?>
+
+</head>
+<body>
+        <div id="envelope">
+                <header>
+                    <h2>Conrad Raspberry Pi Advent Calendar</h2>
+                </header>
+                <hr>
+
+                <form action="index.php" method="post">
+                    <input type="submit" name="cw" value="Turn Clockwise" id="cw">
+                    <input type="submit" name="ccw" value="Turn Counterclockwise" id="ccw">
+                </form>
+        </div>
+</body>
+</html>
