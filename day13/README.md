@@ -10,8 +10,14 @@ Amount | Name | Note
 
 ### Task
 The goal of day 13 is to create two scripts which control the servo motor.
-To execute the scripts a web app with two buttons, one for clockwise and one for counter-clockwise, is used.
+To execute the scripts a web app with two buttons, one for clockwise and one for counterclockwise, is used.
 
 ### Result
 
 **TODO**
+
+Files:
+- [pwmServo_ccw.py](pwmServo_ccw.py)
+- [pwmServo_cw.py](pwmServo_cw.py)
+- [index.html](web_app/index.html)
+- [index.php](web_app/index.php)
