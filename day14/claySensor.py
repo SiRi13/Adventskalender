@@ -16,22 +16,26 @@ GPIO.setup(GREEN, GPIO.OUT)
 GPIO.setup(YELLOW, GPIO.OUT)
 GPIO.setup(RED, GPIO.OUT)
 
+GPIO.output(GREEN, 0)
+GPIO.output(YELLOW, 0)
+GPIO.output(RED, 0)
+
 try:
     while True:
-        while GPIO.input(CLAY) != 0:
+        while GPIO.input(CLAY) != 1:
             pass
-        while GPIO.input(CLAY) == 0:
-            GPIO.outpu(GREEN, 1)
+        while GPIO.input(CLAY) != 0:
+            GPIO.output(GREEN, 1)
             time.sleep(0.01)
-            GPIO.outpu(GREEN, 0)
+            GPIO.output(GREEN, 0)
             time.sleep(0.01)
-            GPIO.outpu(YELLOW, 1)
+            GPIO.output(YELLOW, 1)
             time.sleep(0.01)
-            GPIO.outpu(YELLOW, 0)
+            GPIO.output(YELLOW, 0)
             time.sleep(0.01)
-            GPIO.outpu(RED, 1)
+            GPIO.output(RED, 1)
             time.sleep(0.01)
-            GPIO.outpu(RED, 0)
+            GPIO.output(RED, 0)
             time.sleep(0.01)
         
         randOut = random.randint(5, 7)
