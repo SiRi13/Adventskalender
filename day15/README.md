@@ -13,4 +13,6 @@ Amount | Name | Note
 ![Circuit of Day 15](assets/IMG_20171215_071643.jpg)
 
 ### Result
-**TODO**
+![Result of Day 15](assets/day15_rgbLed.gif)
+
+Python script: [rgbLed.py](rgbLed.py)
