@@ -33,7 +33,7 @@ Other models should work fine but you must check for correct wiring.
 - [x] [Day 12](day12/)
 - [x] [Day 13](day13/)
 - [x] [Day 14](day14/)
-- [ ] Day 15
+- [x] [Day 15](day15/)
 - [ ] Day 16
 - [ ] Day 17
 - [ ] Day 18

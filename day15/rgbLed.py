@@ -20,17 +20,17 @@ GPIO.output(RED, 0)
 try:
     while True:
         GPIO.output(RED, 1)
-        time.sleep(0.1)
+        time.sleep(0.2)
         GPIO.output(GREEN, 0)
-        time.sleep(0.1)
+        time.sleep(0.2)
         GPIO.output(BLUE, 1)
-        time.sleep(0.1)
+        time.sleep(0.2)
         GPIO.output(RED, 0)
-        time.sleep(0.1)
+        time.sleep(0.2)
         GPIO.output(GREEN, 1)
-        time.sleep(0.1)
+        time.sleep(0.2)
         GPIO.output(BLUE, 0)
-        time.sleep(0.1)
+        time.sleep(0.2)
 
 except KeyboardInterrupt:
     GPIO.cleanup()
