@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block body %}
+  <script type="text/javascript">
+    $(function() {
+      var submit_form = function(e) {
+        $.getJSON($SCRIPT_ROOT + '/_day16', {
+          red1: $('input[name="red1"]').val(),
+          red2: $('input[name="red2"]').val(),
+          green1: $('input[name="green1"]').val(),
+          green2: $('input[name="green2"]').val(),
+          blue1: $('input[name="blue1"]').val(),
+          blue2: $('input[name="blue2"]').val()
+        },
+        function(data) {
+          $('#result').html(data.result);
+        });
+        return false;
+      };
+        
+      $('input[type=text]').bind('keydown', function(e) {
+        if (e.keyCode == 13) {
+          submit_form(e);
+        }
+      });
+    });
+  </script>
+
+<h1>Day 16</h1>
+<p>
+    <input type="text" size="5" name="red1">
+    <input type="text" size="5" name="red2">
+    <input type="text" size="5" name="green1">
+    <input type="text" size="5" name="green2">
+    <input type="text" size="5" name="blue1">
+    <input type="text" size="5" name="blue2">
+
+    <textarea id="result" ></textarea>
+</p>
+
+{% endblock %}
