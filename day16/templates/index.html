@@ -5,11 +5,17 @@
       var submit_form = function(e) {
         $.getJSON($SCRIPT_ROOT + '/_day16', {
           red1: $('input[name="red1"]').val(),
-          red2: $('input[name="red2"]').val(),
+          red1time: $('input[name="red1time"]').val(),
           green1: $('input[name="green1"]').val(),
-          green2: $('input[name="green2"]').val(),
+          green1time: $('input[name="green1time"]').val(),
           blue1: $('input[name="blue1"]').val(),
-          blue2: $('input[name="blue2"]').val()
+          blue1time: $('input[name="blue1time"]').val(),
+          red2: $('input[name="red2"]').val(),
+          red2time: $('input[name="red2time"]').val(),
+          green2: $('input[name="green2"]').val(),
+          green2time: $('input[name="green2time"]').val(),
+          blue2: $('input[name="blue2"]').val(),
+          blue2time: $('input[name="blue2time"]').val()
         },
         function(data) {
           $('#result').html(data.result);
@@ -27,13 +33,36 @@
 
 <h1>Day 16</h1>
 <p>
+    <label for="red1">RED1 DC</label>
     <input type="text" size="5" name="red1">
-    <input type="text" size="5" name="red2">
+    <label for="GREEN1">GREEN1 DC</label>
     <input type="text" size="5" name="green1">
-    <input type="text" size="5" name="green2">
+    <label for="blue1">BLUE1 DC</label>
     <input type="text" size="5" name="blue1">
-    <input type="text" size="5" name="blue2">
 
+    <label for="red2">RED2 DC</label>
+    <input type="text" size="5" name="red2">
+    <label for="green2">GREEN2 DC</label>
+    <input type="text" size="5" name="green2">
+    <label for="blue2">BLUE2 DC</label>
+    <input type="text" size="5" name="blue2">
+</p>
+<p>
+    <label for="red1time">RED1 Time</label>
+    <input type="text" size="5" name="red1time">
+    <label for="green1time">GREEN1 Time</label>
+    <input type="text" size="5" name="green1time">
+    <label for="blue1time">BLUE1 Time</label>
+    <input type="text" size="5" name="blue1time">
+
+    <label for="red2time">RED2 Time</label>
+    <input type="text" size="5" name="red2time">
+    <label for="green2time">GREEN2 Time</label>
+    <input type="text" size="5" name="green2time">
+    <label for="blue2time">BLUE2 Time</label>
+    <input type="text" size="5" name="blue2time">
+</p>
+<p>
     <textarea id="result" ></textarea>
 </p>
 
