@@ -1,8 +1,28 @@
 {% extends "layout.html" %} {% block body %}
+<style>
+  #custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }
+</style>
 <script type="text/javascript">
     $(function() {
+        var handle = $( "#red1-slider" );
+        $( "#slider" ).slider({
+                create: function() {
+                        handle.text( $( this ).slider( "value" ) );
+                },
+                slide: function( event, ui ) {
+                        handle.text( ui.value );
+                        $('#red1').value(ui.value);
+                }
+        });
         var submit_red1 = function(e) {
-            $.getJSON($SCRIPT_ROOT + '/_day16', {
+            $.post($SCRIPT_ROOT + '/day16/red1', {
                     red1: $('input[name="red1"]').val(),
                     red1time: $('input[name="red1time"]').val()
                 },
@@ -64,6 +84,15 @@
             return false;
         };
 
+        var value;
+        $("#slider").roundSlider({
+                sliderType: "min-range",
+                change: function() {
+                        var obj1 =  $("#slider").data("roundSlider");
+                        value = obj1.getValue();
+                        $.getJSON('/valueofslider', {
+                                a:value
+                        });
         $('#red1').bind('keydown', function(e) {
             if (e.keyCode == 13) {
                 submit_red1(e);
@@ -99,6 +128,9 @@
 
 <h1>Day 16</h1>
 <p>
+<div id="slider">
+  <div id="red1-slider" class="ui-slider-handle"></div>
+</div>
     <label for="red1">RED1 DC</label>
     <input type="text" size="5" id="red1" name="red1">
     <label for="GREEN1">GREEN1 DC</label>

@@ -8,7 +8,7 @@ from flask import Flask, jsonify, render_template, request
 app = Flask(__name__)
 
 RED1, GREEN1, BLUE1 = 7, 5, 6
-RED2, GREEN2, BLUE2 = 10, 7, 8
+RED2, GREEN2, BLUE2 = 10, 8, 9
 
 r1, g1, b1 = 0, 0, 0
 r1t, g1t, b1t = 0, 0, 0
@@ -73,14 +73,9 @@ def blue2():
 @app.route("/day16")
 def index():
     GPIO.setmode(GPIO.BCM)
-    threads = []
     for i in [RED1, GREEN1, BLUE1, RED2, GREEN2, BLUE2]:
         t = threading.Thread(target=gpio_thread, args=(i,))
-        threads.append(t)
         t.start()
-
-    for t in threads:
-        t.join()
 
     return render_template('index.html')
 
