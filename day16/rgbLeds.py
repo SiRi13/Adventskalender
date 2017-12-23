@@ -35,6 +35,7 @@ def red2():
     return jsonify(result="red2 set")
 
 @app.route('/day16/green1', methods=['POST'])
+def green1():
     global g1, g1t
 
     g1 = request.form.get('green1', 0, type=int)
@@ -43,6 +44,7 @@ def red2():
     return jsonify(result="green1 set")
 
 @app.route('/day16/green2', methods=['POST'])
+def green2():
     global g2, g2t
 
     g2 = request.form.get('green2', 0, type=int)
@@ -51,6 +53,7 @@ def red2():
     return jsonify(result="green2 set")
 
 @app.route('/day16/blue1', methods=['POST'])
+def blue1():
     global b1, b1t
 
     b1 = request.form.get('blue1', 0, type=int)
@@ -59,7 +62,7 @@ def red2():
     return jsonify(result="blue1 set")
 
 @app.route('/day16/blue2', methods=['POST'])
-def day16():
+def blue2():
     global b2, b2t
 
     b2 = request.form.get('blue2', 0, type=int)
@@ -96,7 +99,7 @@ def gpio_thread(ledId):
     elif ledId == GREEN1:
         pwm.start(g1)
         while True:
-            if 0 < g1 < 100:
+            if 0 <= g1 <= 100:
                 pwm.ChangeDutyCycle(g1)
             time.sleep(g1t)
         pwm.stop()
@@ -104,7 +107,7 @@ def gpio_thread(ledId):
     elif ledId == BLUE1:
         pwm.start(b1)
         while True:
-            if 0 < b1 < 100:
+            if 0 <= b1 <= 100:
                 pwm.ChangeDutyCycle(b1)
             time.sleep(b1t)
         pwm.stop()
@@ -112,7 +115,7 @@ def gpio_thread(ledId):
     elif ledId == RED2:
         pwm.start(r2)
         while True:
-            if 0 < r2 < 100:
+            if 0 <= r2 <= 100:
                 pwm.ChangeDutyCycle(r2)
             time.sleep(r2t)
         pwm.stop()
@@ -120,7 +123,7 @@ def gpio_thread(ledId):
     elif ledId == GREEN2:
         pwm.start(g2)
         while True:
-            if 0 < g2 < 100:
+            if 0 <= g2 <= 100:
                 pwm.ChangeDutyCycle(g2)
             time.sleep(g2t)
         pwm.stop()
@@ -128,11 +131,10 @@ def gpio_thread(ledId):
     elif ledId == BLUE2:
         pwm.start(b2)
         while True:
-            if 0 < b2 < 100:
+            if 0 <= b2 <= 100:
                 pwm.ChangeDutyCycle(b2)
             time.sleep(b2t)
         pwm.stop()
-
 
 if __name__ == '__main__':
     app.run()

@@ -1,69 +1,135 @@
-{% extends "layout.html" %}
-{% block body %}
-  <script type="text/javascript">
+{% extends "layout.html" %} {% block body %}
+<script type="text/javascript">
     $(function() {
-      var submit_form = function(e) {
-        $.getJSON($SCRIPT_ROOT + '/_day16', {
-          red1: $('input[name="red1"]').val(),
-          red1time: $('input[name="red1time"]').val(),
-          green1: $('input[name="green1"]').val(),
-          green1time: $('input[name="green1time"]').val(),
-          blue1: $('input[name="blue1"]').val(),
-          blue1time: $('input[name="blue1time"]').val(),
-          red2: $('input[name="red2"]').val(),
-          red2time: $('input[name="red2time"]').val(),
-          green2: $('input[name="green2"]').val(),
-          green2time: $('input[name="green2time"]').val(),
-          blue2: $('input[name="blue2"]').val(),
-          blue2time: $('input[name="blue2time"]').val()
-        },
-        function(data) {
-          $('#result').html(data.result);
+        var submit_red1 = function(e) {
+            $.getJSON($SCRIPT_ROOT + '/_day16', {
+                    red1: $('input[name="red1"]').val(),
+                    red1time: $('input[name="red1time"]').val()
+                },
+                function(data) {
+                    $('#result').html(data.result);
+                });
+            return false;
+        };
+        var submit_green1 = function(e) {
+            $.post($SCRIPT_ROOT + '/day16/green1', {
+                    green1: $('input[name="green1"]').val(),
+                    green1time: $('input[name="green1time"]').val()
+                },
+                function(data) {
+                    $('#result').html(data.result);
+                });
+            return false;
+        };
+        var submit_blue1 = function(e) {
+            $.post($SCRIPT_ROOT + '/day16/blue1', {
+                    blue1: $('input[name="blue1"]').val(),
+                    blue1time: $('input[name="blue1time"]').val()
+                },
+                function(data) {
+                    $('#result').html(data.result);
+                });
+            return false;
+        };
+
+        var submit_red2 = function(e) {
+            $.post($SCRIPT_ROOT + '/day16/red2', {
+                    red2: $('input[name="red2"]').val(),
+                    red2time: $('input[name="red2time"]').val()
+                },
+                function(data) {
+                    $('#result').html(data.result);
+                });
+            return false;
+        };
+
+        var submit_green2 = function(e) {
+            $.post($SCRIPT_ROOT + '/day16/green2', {
+                green2: $('input[name="green2"]').val(),
+                green2time: $('input[name="green2time"]').val()
+            }, function(data) {
+                $('#result').html(data.result);
+            });
+            return false;
+        };
+
+        var submit_blue2 = function(e) {
+            $.post($SCRIPT_ROOT + '/day16/blue2', {
+                    blue2: $('input[name="blue2"]').val(),
+                    blue2time: $('input[name="blue2time"]').val()
+                },
+                function(data) {
+                    $('#result').html(data.result);
+                });
+            return false;
+        };
+
+        $('#red1').bind('keydown', function(e) {
+            if (e.keyCode == 13) {
+                submit_red1(e);
+            }
         });
-        return false;
-      };
-        
-      $('input[type=text]').bind('keydown', function(e) {
-        if (e.keyCode == 13) {
-          submit_form(e);
-        }
-      });
+        $('#green1').bind('keydown', function(e) {
+            if (e.keyCode == 13) {
+                submit_green1(e);
+            }
+        });
+        $('#blue1').bind('keydown', function(e) {
+            if (e.keyCode == 13) {
+                submit_blue1(e);
+            }
+        });
+        $('#red2').bind('keydown', function(e) {
+            if (e.keyCode == 13) {
+                submit_red2(e);
+            }
+        });
+        $('#green2').bind('keydown', function(e) {
+            if (e.keyCode == 13) {
+                submit_green2(e);
+            }
+        });
+        $('#blue2').bind('keydown', function(e) {
+            if (e.keyCode == 13) {
+                submit_blue2(e);
+            }
+        });
     });
-  </script>
+</script>
 
 <h1>Day 16</h1>
 <p>
     <label for="red1">RED1 DC</label>
-    <input type="text" size="5" name="red1">
+    <input type="text" size="5" id="red1" name="red1">
     <label for="GREEN1">GREEN1 DC</label>
-    <input type="text" size="5" name="green1">
+    <input type="text" size="5" id="green1" name="green1">
     <label for="blue1">BLUE1 DC</label>
-    <input type="text" size="5" name="blue1">
+    <input type="text" size="5" id="blue1" name="blue1">
 
     <label for="red2">RED2 DC</label>
-    <input type="text" size="5" name="red2">
+    <input type="text" size="5" id="red2" name="red2">
     <label for="green2">GREEN2 DC</label>
-    <input type="text" size="5" name="green2">
+    <input type="text" size="5" id="green2" name="green2">
     <label for="blue2">BLUE2 DC</label>
-    <input type="text" size="5" name="blue2">
+    <input type="text" size="5" id="blue2" name="blue2">
 </p>
 <p>
     <label for="red1time">RED1 Time</label>
-    <input type="text" size="5" name="red1time">
+    <input type="text" size="5" id="red1time" name="red1time">
     <label for="green1time">GREEN1 Time</label>
-    <input type="text" size="5" name="green1time">
+    <input type="text" size="5" id="green1time" name="green1time">
     <label for="blue1time">BLUE1 Time</label>
-    <input type="text" size="5" name="blue1time">
+    <input type="text" size="5" id="blue1time" name="blue1time">
 
     <label for="red2time">RED2 Time</label>
-    <input type="text" size="5" name="red2time">
+    <input type="text" size="5" id="red2time" name="red2time">
     <label for="green2time">GREEN2 Time</label>
-    <input type="text" size="5" name="green2time">
+    <input type="text" size="5" id="green2time" name="green2time">
     <label for="blue2time">BLUE2 Time</label>
-    <input type="text" size="5" name="blue2time">
+    <input type="text" size="5" id="blue2time" name="blue2time">
 </p>
 <p>
-    <textarea id="result" ></textarea>
+    <textarea id="result"></textarea>
 </p>
 
 {% endblock %}
