@@ -1,6 +1,26 @@
 {% extends "layout.html" %} {% block body %}
 <style>
-  #custom-handle {
+  div.row {
+    margin: 5px 0;
+    padding: 0 5px;
+    clear: both;
+  }
+
+  div.element {
+    float: left;
+    padding: 10px 20px;
+  }
+
+  .ui-slider {
+    width: 400px;
+    margin: 10px 0;
+  }
+
+  .ui-draggable, .ui-droppable {
+    background-position: top;
+  }
+
+  .slider {
     width: 3em;
     height: 1.6em;
     top: 50%;
@@ -8,17 +28,25 @@
     text-align: center;
     line-height: 1.6em;
   }
+
+  .red-slider .ui-slider-range { background: #ef2929; }
+  .red-slider .ui-slider-handle { border-color: #ef2929; }
+  .green-slider .ui-slider-range { background: #8ae234; }
+  .green-slider .ui-slider-handle { border-color: #8ae234; }
+  .blue-slider .ui-slider-range { background: #729fcf; }
+  .blue-slider .ui-slider-handle { border-color: #729fcf; }
 </style>
 <script type="text/javascript">
     $(function() {
-        var handle = $( "#red1-slider" );
-        $( "#slider" ).slider({
+        $( "#red1-container" ).slider({
+		range: 'min',
                 create: function() {
-                        handle.text( $( this ).slider( "value" ) );
+                        $( "#red1-slider" ).text( $( this ).slider( "value" ) );
                 },
                 slide: function( event, ui ) {
-                        handle.text( ui.value );
-                        $('#red1').value(ui.value);
+                        $( "#red1-slider" ).text( ui.value );
+                        $('#red1').val(ui.value);
+			submit_red1(event);
                 }
         });
         var submit_red1 = function(e) {
@@ -31,6 +59,17 @@
                 });
             return false;
         };
+        $( "#green1-container" ).slider({
+		range: 'min',
+                create: function() {
+                        $( "#green1-slider" ).text( $( this ).slider( "value" ) );
+                },
+                slide: function( event, ui ) {
+                        $( "#green1-slider" ).text( ui.value );
+                        $('#green1').val(ui.value);
+			submit_green1(event);
+                }
+        });
         var submit_green1 = function(e) {
             $.post($SCRIPT_ROOT + '/day16/green1', {
                     green1: $('input[name="green1"]').val(),
@@ -41,6 +80,17 @@
                 });
             return false;
         };
+        $( "#blue1-container" ).slider({
+		range: 'min',
+                create: function() {
+                        $( "#blue1-slider" ).text( $( this ).slider( "value" ) );
+                },
+                slide: function( event, ui ) {
+                        $( "#blue1-slider" ).text( ui.value );
+                        $('#blue1').val(ui.value);
+			submit_blue1(event);
+                }
+        });
         var submit_blue1 = function(e) {
             $.post($SCRIPT_ROOT + '/day16/blue1', {
                     blue1: $('input[name="blue1"]').val(),
@@ -52,6 +102,17 @@
             return false;
         };
 
+        $( "#red2-container" ).slider({
+		range: 'min',
+                create: function() {
+                        $( "#red2-slider" ).text( $( this ).slider( "value" ) );
+                },
+                slide: function( event, ui ) {
+                        $( "#red2-slider" ).text( ui.value );
+                        $('#red2').val(ui.value);
+			submit_red2(event);
+                }
+        });
         var submit_red2 = function(e) {
             $.post($SCRIPT_ROOT + '/day16/red2', {
                     red2: $('input[name="red2"]').val(),
@@ -63,6 +124,17 @@
             return false;
         };
 
+        $( "#green2-container" ).slider({
+		range: 'min',
+                create: function() {
+                        $( "#green2-slider" ).text( $( this ).slider( "value" ) );
+                },
+                slide: function( event, ui ) {
+                        $( "#green2-slider" ).text( ui.value );
+                        $('#green2').val(ui.value);
+			submit_green2(event);
+                }
+        });
         var submit_green2 = function(e) {
             $.post($SCRIPT_ROOT + '/day16/green2', {
                 green2: $('input[name="green2"]').val(),
@@ -73,6 +145,17 @@
             return false;
         };
 
+        $( "#blue2-container" ).slider({
+		range: 'min',
+                create: function() {
+                        $( "#blue2-slider" ).text( $( this ).slider( "value" ) );
+                },
+                slide: function( event, ui ) {
+                        $( "#blue2-slider" ).text( ui.value );
+                        $('#blue2').val(ui.value);
+			submit_blue2(event);
+                }
+        });
         var submit_blue2 = function(e) {
             $.post($SCRIPT_ROOT + '/day16/blue2', {
                     blue2: $('input[name="blue2"]').val(),
@@ -84,15 +167,6 @@
             return false;
         };
 
-        var value;
-        $("#slider").roundSlider({
-                sliderType: "min-range",
-                change: function() {
-                        var obj1 =  $("#slider").data("roundSlider");
-                        value = obj1.getValue();
-                        $.getJSON('/valueofslider', {
-                                a:value
-                        });
         $('#red1').bind('keydown', function(e) {
             if (e.keyCode == 13) {
                 submit_red1(e);
@@ -127,24 +201,55 @@
 </script>
 
 <h1>Day 16</h1>
-<p>
-<div id="slider">
-  <div id="red1-slider" class="ui-slider-handle"></div>
-</div>
-    <label for="red1">RED1 DC</label>
-    <input type="text" size="5" id="red1" name="red1">
-    <label for="GREEN1">GREEN1 DC</label>
-    <input type="text" size="5" id="green1" name="green1">
-    <label for="blue1">BLUE1 DC</label>
-    <input type="text" size="5" id="blue1" name="blue1">
 
-    <label for="red2">RED2 DC</label>
-    <input type="text" size="5" id="red2" name="red2">
-    <label for="green2">GREEN2 DC</label>
-    <input type="text" size="5" id="green2" name="green2">
-    <label for="blue2">BLUE2 DC</label>
-    <input type="text" size="5" id="blue2" name="blue2">
-</p>
+<div class="row">
+	<div class="element">
+		<label for="red1">RED1 DC</label>
+		<div class="red-slider" id="red1-container">
+			<div id="red1-slider" class="slider ui-slider-handle"></div>
+		</div>
+		<input type="text" size="5" id="red1" name="red1">
+	</div>
+	<div class="element">
+		<label for="GREEN1">GREEN1 DC</label>
+		<div id="green1-container" class="green-slider">
+			<div id="green1-slider" class="slider ui-slider-handle"></div>
+		</div>
+		<input type="text" size="5" id="green1" name="green1">
+	</div>
+	<div class="element">
+		<label for="blue1">BLUE1 DC</label>
+		<div id="blue1-container" class="blue-slider">
+			<div id="blue1-slider" class="slider ui-slider-handle"></div>
+		</div>
+		<input type="text" size="5" id="blue1" name="blue1">
+	</div>
+</div>
+
+<div class="row">    
+	<div class="element">
+		<label for="red2">RED2 DC</label>
+		<div id="red2-container" class="red-slider">
+			<div id="red2-slider" class="slider ui-slider-handle"></div>
+		</div>
+		<input type="text" size="5" id="red2" name="red2">
+	</div>
+	<div class="element">
+		<label for="green2">GREEN2 DC</label>
+		<div id="green2-container" class="green-slider">
+		<div id="green2-slider" class="slider ui-slider-handle"></div>
+		</div>
+		<input type="text" size="5" id="green2" name="green2">
+	</div>
+	<div class="element">
+		<label for="blue2">BLUE2 DC</label>
+		<div id="blue2-container" class="blue-slider">
+		<div id="blue2-slider" class="slider ui-slider-handle"></div>
+		</div>
+		<input type="text" size="5" id="blue2" name="blue2">
+	</div>
+</div>
+
 <p>
     <label for="red1time">RED1 Time</label>
     <input type="text" size="5" id="red1time" name="red1time">
