@@ -1,8 +1,8 @@
-## Day ??
+## Day 19
 
-### Content of Day ??
+### Content of Day 19
 
-![Content of Day ??](assets/IMG_20171219_120534.jpg)
+![Content of Day 19](assets/IMG_20171219_120534.jpg)
 
 Amount | Name | Note
 --- | --- | ---
@@ -12,8 +12,8 @@ Amount | Name | Note
 
 **TODO**
 
-![Circuit of Day ??](assets/IMG_201712??_??????.jpg)
-Circuit of day ??
+![Circuit of Day 19](assets/IMG_20171224_143316.jpg)
+Circuit of day 19
 
 ### Result
 
