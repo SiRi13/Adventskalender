@@ -39,7 +39,7 @@ Other models should work fine but you must check for correct wiring.
 - [x] [Day 18](day18/)
 - [x] [Day 19](day19/)
 - [x] [Day 20](day20/)
-- [ ] Day 21
-- [ ] Day 22
-- [ ] Day 23
-- [ ] Day 24
+- [x] [Day 21](day21/)
+- [x] [Day 22](day22/)
+- [x] [Day 23](day23/)
+- [x] [Day 24](day24/)
