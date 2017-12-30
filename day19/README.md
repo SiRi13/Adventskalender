@@ -9,12 +9,12 @@ Amount | Name | Note
 1 | Jumper Wire | Black
 
 ### Task
-
-**TODO**
+This program is similar to day 18 but with a push-button to reverse the order in which the LEDs are turned on.
 
 ![Circuit of Day 19](assets/IMG_20171224_143316.jpg)
 Circuit of day 19
 
 ### Result
 
-**TODO**
+**TODO**  
+Python script: [xmasPyramidButton.py](xmasPyramidButton.py)
