@@ -2,14 +2,12 @@
 
 ### Content of Day 24
 
-![Content of Day 24](assets/IMG_20171224_??????.jpg)
+![Content of Day 24](assets/IMG_20171224_110124.jpg)
 
-Amount | Name | Note
---- | --- | ---
-1 | Jumper Wire | Purple
+The content of the last day is a card with a link to download MP3 files for the last task.
 
 ### Task
-Task of the last day is a Python script which counts down the months until next christmas.
+Task of the last day is a Python script which counts down the months until next Christmas.
 First the current month is determined.
 If it's the first three months of the year song one is played.
 Between April and June the second song is played, whereas the third song is played between July and September.
