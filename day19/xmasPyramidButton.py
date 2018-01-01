@@ -17,30 +17,31 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(BUTTON, GPIO.IN, GPIO.PUD_DOWN)
 GPIO.setup(SERVO, GPIO.OUT)
 
-pwm_dc = 2.5
-delta = 2.5
+pwm_dc = 4
+delta = 2
 pwm = GPIO.PWM(SERVO, 50)
 pwm.start(pwm_dc)
 
 for i in LED[0]:
     GPIO.setup(i, GPIO.OUT)
+    GPIO.output(i, False)
 
 try:
     reverse = False
     while True:
         pwm.ChangeDutyCycle(pwm_dc)
         pwm_dc += delta
-        if pwm_dc == 12.5 or pwm_dc == 2.5:
-            position = -delta
+        if pwm_dc >= 8 or pwm_dc <= 2:
+            delta *= -1 
         time.sleep(0.2)
         pwm.ChangeDutyCycle(0)
         
         for i in LED[reverse]:
-            GPIO.setup(i, True)
+            GPIO.output(i, True)
             time.sleep(0.2)
-            GPIO.setup(i, False)
+            GPIO.output(i, False)
             if GPIO.input(BUTTON) == True:
-                x != x
+                reverse != reverse
 
 except KeyboardInterrupt:
     pwm.stop()
