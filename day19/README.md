@@ -11,10 +11,11 @@ Amount | Name | Note
 ### Task
 This program is similar to day 18 but with a push-button to reverse the order in which the LEDs are turned on.
 
-![Circuit of Day 19](assets/IMG_20171224_143316.jpg)
+![Circuit of Day 19](assets/IMG_20180101_163249.jpg)
 Circuit of day 19
 
 ### Result
 
-**TODO**  
+![Result of Day 19](assets/day19_xmasPyramidButton.gif)
+
 Python script: [xmasPyramidButton.py](xmasPyramidButton.py)

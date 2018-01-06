@@ -14,10 +14,11 @@ One sensor lets all three LEDs blink at the same time, the other triggers runnin
 
 **TODO**
 
-![Circuit of Day 21](assets/IMG_2017122?_??????.jpg)
+![Circuit of Day 21](assets/IMG_20180101_201951.jpg)
 Circuit of day 21
 
 ### Result
 
-**TODO**  
+![Results of Day 21](assets/day21_xmasPyramidClay.gif)
+
 Python script: [xmasPyramidClay.py](xmasPyramidClay.py)

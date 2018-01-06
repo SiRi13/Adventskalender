@@ -13,9 +13,17 @@ Instead of a push-button like on day 19, the Christmas pyramid is controlled fro
 They won't run automatically at the same time.
 Each function, turning to the left, turning to the right, activating running lights, or blinking lights, will be invoked separately.
 
-![Circuit of Day 20](assets/IMG_20171220_??????.jpg)
+![Circuit of Day 20](assets/IMG_20180101_200944.jpg)
 Circuit of day 20
 
 ### Result
 
 **TODO**
+
+Files:
+- [pyramidLedBlinking.py](pyramidLedBlinking.py)
+- [pyramidLedRunning.py](pyramidLedRunning.py)
+- [pyramidServoCCW.py](pyramidServoCCW.py)
+- [pyramidServoCW.py](pyramidServoCW.py)
+- [index.php](index.php)
+- [index.html](index.html)
