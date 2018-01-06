@@ -13,11 +13,11 @@ If it's the first three months of the year song one is played.
 Between April and June the second song is played, whereas the third song is played between July and September.
 On the three months before December the fourth song will be played and in December the last song.
 
-![Circuit of Day 24](assets/IMG_20171224_??????.jpg)
+![Circuit of Day 24](assets/IMG_20180101_183218.jpg)
 Circuit of day 24
 
 ### Result
 
-**TODO**  
+![Result of Day 24](assets/day24_adventCountdown.gif)
 
 Python script: [adventCountdown.py](adventCountdown.py)
