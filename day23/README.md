@@ -14,10 +14,10 @@ The colors are generated in the HSV color space and transformed with *colorsys.h
 
 **TODO**
 
-![Circuit of Day 23](assets/IMG_20171223_??????.jpg)
+![Circuit of Day 23](assets/IMG_20180101_175346.jpg)
 Circuit of day 23
 
 ### Result
+![Result of Day 23](assets/day23_rgbLedsHsv.gif)
 
-**TODO**
 Python script: [rgbLedsHsv.py](rgbLedsHsv.py)
