@@ -4,7 +4,8 @@ Python scripts I implemented for my Conrad Advent calendar :)
 ## Requirements
 ### Hardware
 I use a RaspberryPi 3 for this project.
-Other models should work fine but you must check for correct wiring.
+Other models should work fine but you must check for correct wiring.  
+Display, keyboard, mouse, and an audio device are indispensable.
 
 ### Software
 - [Raspbian Stretch](https://www.raspbian.org/)
@@ -43,3 +44,12 @@ Other models should work fine but you must check for correct wiring.
 - [x] [Day 22](day22/)
 - [x] [Day 23](day23/)
 - [x] [Day 24](day24/)
+
+## Conclusion
+
+This Advent calendar was somewhat disappointing.  
+Most of the gifts were simple jumper cables or pin headers and there are quite some mistakes in the manual.  
+Without some kind of mount for the servo motor each task with it was very annoying.  
+Some resources are only with a prior registration available.  
+
+It's probably a fun project for children or novice users but not for an experienced tinkerer.
