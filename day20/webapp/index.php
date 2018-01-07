@@ -6,14 +6,14 @@
 <head>
 	
 	<?php
-		if ($_POST["servo_links"]) {
-			echo exec('python /var/www/html/tag20/20servo_li.py');
-		} elseif ($_POST["servo_rechts"]) {
-			echo exec('python /var/www/html/tag20/20servo_re.py');			
-		} elseif ($_POST["lauflicht"]) {
-			echo exec('python /var/www/html/tag20/20pyramide_lauflicht.py');			
-		} elseif ($_POST["blinken"]) {
-			echo exec('python /var/www/html/tag20/20pyramide_blink.py');			
+		if ($_POST["servoCCW"]) {
+			echo exec('python /var/www/html/day20/pyramidServoCCW.py');
+		} elseif ($_POST["servoCW"]) {
+			echo exec('python /var/www/html/day20/pyramidServoCW.py');			
+		} elseif ($_POST["running"]) {
+			echo exec('python /var/www/html/day20/pyramidLedRunning.py');			
+		} elseif ($_POST["blinking"]) {
+			echo exec('python /var/www/html/day20/pyramidLedBlinking.py');			
 		}	
 	?>	
 	
@@ -36,10 +36,10 @@
 <hr>
 
 <form action="index.php" method="post">  
-	<input name="servo_links" id="servo_links" type="submit" value="Pyramide links" style="background-color: #4180C5">		
-	<input name="servo_rechts" id="servo_rechts" type="submit" value="Pyramide rechts" style="background-color: #4180C5">		
-	<input name="lauflicht" id="lauflicht" type="submit" value="Lauflicht" style="background-color: #4180C5">
-	<input name="blinken" id="blinken" type="submit" value="Blinken" style="background-color: #4180C5">
+	<input name="servoCCW" id="servoCCW" type="submit" value="Pyramide links" style="background-color: #4180C5">		
+	<input name="servoCW" id="servoCW" type="submit" value="Pyramide rechts" style="background-color: #4180C5">		
+	<input name="running" id="running" type="submit" value="Lauflicht" style="background-color: #4180C5">
+	<input name="blinking" id="blinking" type="submit" value="Blinken" style="background-color: #4180C5">
 </form>
 </div>
 </body>
