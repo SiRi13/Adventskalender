@@ -19,13 +19,13 @@ pwm.ChangeDutyCycle(pwm_dc)
 time.sleep(0.5)
 pwm.ChangeDutyCycle(0)
 
-if m < 4:
+if month < 4:
     subprocess.Popen(["omxplayer", "-o", "hdmi", "assets/lied1.mp3"])
-elif m < 7:
+elif month < 7:
     subprocess.Popen(["omxplayer", "-o", "hdmi", "assets/lied2.mp3"])
-elif m < 10:
+elif month < 10:
     subprocess.Popen(["omxplayer", "-o", "hdmi", "assets/lied3.mp3"])
-elif m < 12:
+elif month < 12:
     subprocess.Popen(["omxplayer", "-o", "hdmi", "assets/lied4.mp3"])
 else:
     subprocess.Popen(["omxplayer", "-o", "hdmi", "assets/lied5.mp3"])
