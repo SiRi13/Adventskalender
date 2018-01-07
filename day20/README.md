@@ -18,7 +18,7 @@ Circuit of day 20
 
 ### Result
 
-**TODO**
+![Result of Day 20](assets/day20_xmasPyramidApp.gif)
 
 Files:
 - [pyramidLedBlinking.py](pyramidLedBlinking.py)
