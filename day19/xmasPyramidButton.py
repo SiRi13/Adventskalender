@@ -17,7 +17,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(BUTTON, GPIO.IN, GPIO.PUD_DOWN)
 GPIO.setup(SERVO, GPIO.OUT)
 
-pwm_dc = 4
+pwm_dc = 5
 delta = 2
 pwm = GPIO.PWM(SERVO, 50)
 pwm.start(pwm_dc)
@@ -31,7 +31,7 @@ try:
     while True:
         pwm.ChangeDutyCycle(pwm_dc)
         pwm_dc += delta
-        if pwm_dc >= 8 or pwm_dc <= 2:
+        if pwm_dc >= 9 or pwm_dc <= 5:
             delta *= -1 
         time.sleep(0.2)
         pwm.ChangeDutyCycle(0)
@@ -41,7 +41,7 @@ try:
             time.sleep(0.2)
             GPIO.output(i, False)
             if GPIO.input(BUTTON) == True:
-                reverse != reverse
+                reverse = not reverse
 
 except KeyboardInterrupt:
     pwm.stop()
